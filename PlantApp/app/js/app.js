@@ -4,7 +4,7 @@
     holds route provider
 */
 
-var databaseModule = angular.module('databaseModule', ['ngRoute', 'databaseControllerModule', 'databaseServicesModule']);
+var databaseModule = angular.module('databaseModule', ['ngRoute', 'databaseControllerModule', 'databaseServicesModule','ngAnimate']);
 
 databaseModule.config(['$routeProvider',
   function($routeProvider) {
@@ -28,6 +28,14 @@ databaseModule.config(['$routeProvider',
     
     when('/Home', {
         templateUrl: 'partials/home.html',
+        controller: 'databaseQuery'
+      }).
+    when('/More', {
+        templateUrl: 'partials/more.html',
+        controller: 'databaseQuery'
+      }).
+    when('/MyGarden', {
+        templateUrl: 'partials/myGarden.html',
         controller: 'databaseQuery'
       }).
       otherwise({

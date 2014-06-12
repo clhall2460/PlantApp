@@ -10,6 +10,9 @@
   <script src="../bower_components/angular/angular.js"></script>
   <script src="../bower_components/angular-route/angular-route.js"></script>
   <script src="../bower_components/angular-resource/angular-resource.js"></script>
+    <script src="../bower_components/angular-animate/angular-animate.js"></script>
+    
+
   <script src="js/app.js"></script>
   <script src="js/controllers.js"></script>
   <script src="js/filters.js"></script>
@@ -17,10 +20,16 @@
     
 
 </head>
-
 <body>
+    <div topbar>
+        <a href= "#/Search"><img ng-src= "img/search.icon.png"></a>
+        <a href= "#/MyGarden"><img ng-src= "img/tree.png"></a>
+        <a href= "#/Home"> <img ng-src= "img/home.png"></a> 
+        <a href= "#/More"><img ng-src= "img/layer.png"></a>
+    </div>
+    
+    <div ng-view class="slide"></div>
 
-  <div ng-view></div>
-
+    
 </body>
 </html>
